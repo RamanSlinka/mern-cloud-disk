@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './registration.css'
 import Input from "../input/Input";
+import {registration} from "../../actions/user";
 
 const Registration = () => {
 
@@ -14,7 +15,9 @@ const Registration = () => {
                    type='text' placecholder='Enter email'/>
             <Input value={password} setValue={setPassword}
                    type='password' placecholder='Enter password'/>
-            <button className='registration__btn'>Sign In</button>
+            <button
+                onClick={() => registration(email, password)}
+                className='registration__btn'>Sign In</button>
         </div>
     );
 };
