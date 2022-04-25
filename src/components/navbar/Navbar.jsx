@@ -21,7 +21,7 @@ const Navbar = () => {
                 {!isAuth &&  <div className='navbar__registration'>
                     <NavLink to='/registration'>Sign Up</NavLink>
                 </div>}
-                {isAuth &&  <div className='navbar__registration'
+                {isAuth &&  <div className='navbar__login'
                 onClick={() => dispatch(logout())}
                 >
                     Sign Out
