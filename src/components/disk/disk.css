@@ -8,6 +8,16 @@
     margin-left: 10px;
 }
 
+.disk__upload-input{
+    display: none;
+}
+.disk__upload-label{
+    border: 2px dashed #494949;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
 
 .popup{
     width: 100%;
