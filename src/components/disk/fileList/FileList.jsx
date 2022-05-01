@@ -6,7 +6,7 @@ import './fileList.css'
 
 
 const FileList = () => {
-    const files = useSelector(state => state.files.files).map(file => <File key={file.id} file={file}/>)
+    const files = useSelector(state => state.files.files).map(file => <File key={file._id} file={file}/>)
     return (
         <div className='filelist'>
             <div className="filelist__header">

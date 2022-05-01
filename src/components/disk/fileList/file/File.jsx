@@ -3,6 +3,7 @@ import {FcFile, FcOpenedFolder} from "react-icons/fc";
 import './file.css'
 import {pushToStack, setCurrentDir} from "../../../../reducers/fileReducer";
 import {useDispatch, useSelector} from "react-redux";
+import {downloadFile} from "../../../../actions/files";
 
 const File = ({file}) => {
     const dispatch = useDispatch();
@@ -14,6 +15,10 @@ const File = ({file}) => {
         }
     }
 
+    function downloadClickHandler(e) {
+        e.stopPropagation()
+        downloadFile(file)
+    }
 
     return (
         <div className='file'
@@ -23,6 +28,11 @@ const File = ({file}) => {
             <div className="file__name">{file.name}</div>
             <div className="file__date">{file.date.slice(0,10)}</div>
             <div className="file__size">{file.size}</div>
+
+            {file.type !== 'dir' && <button
+                onClick={(e) => downloadClickHandler(e)}
+                className='file__btn file__download'>   Download </button>}
+            <button className='file__btn file__delete'>   Delete </button>
         </div>
     );
 };
