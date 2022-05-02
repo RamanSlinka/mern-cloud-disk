@@ -3,14 +3,15 @@ import {FcFile, FcOpenedFolder} from "react-icons/fc";
 import './file.css'
 import {pushToStack, setCurrentDir} from "../../../../reducers/fileReducer";
 import {useDispatch, useSelector} from "react-redux";
-import {downloadFile} from "../../../../actions/files";
+import {deleteFile, downloadFile} from "../../../../actions/files";
 
 const File = ({file}) => {
     const dispatch = useDispatch();
     const currentDir = useSelector(state => state.files.currentDir)
 
     function openDirHandler () {
-        if(file.type === 'dir') {dispatch(pushToStack(currentDir))
+        if(file.type === 'dir') {
+            dispatch(pushToStack(currentDir))
             dispatch(setCurrentDir(file._id))
         }
     }
@@ -18,6 +19,11 @@ const File = ({file}) => {
     function downloadClickHandler(e) {
         e.stopPropagation()
         downloadFile(file)
+    }
+    function deleteClickHandler(e) {
+        e.stopPropagation()
+        dispatch(deleteFile(file))
+        debugger
     }
 
     return (
@@ -32,7 +38,9 @@ const File = ({file}) => {
             {file.type !== 'dir' && <button
                 onClick={(e) => downloadClickHandler(e)}
                 className='file__btn file__download'>   Download </button>}
-            <button className='file__btn file__delete'>   Delete </button>
+            <button
+                onClick={(e) => deleteClickHandler(e)}
+                className='file__btn file__delete'>   Delete </button>
         </div>
     );
 };
