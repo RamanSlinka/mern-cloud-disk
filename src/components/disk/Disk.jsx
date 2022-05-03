@@ -14,10 +14,11 @@ const Disk = () => {
     const currentDir = useSelector(state => state.files.currentDir)
     const dirStack = useSelector(state => state.files.dirStack)
     const [dragEnter, setDragEnter] = useState(false)
+    const [sort, setSort] = useState('type')
 
     useEffect(() => {
-        dispatch(getFiles(currentDir))
-    }, [currentDir])
+        dispatch(getFiles(currentDir,sort))
+    }, [currentDir, sort])
 
     function showPopupHandler() {
         dispatch(setPopupDisplay('Flex'))
@@ -33,19 +34,19 @@ const Disk = () => {
         files.forEach(file => dispatch(uploadFile(file, currentDir)))
     }
 
-    function dragEnterHandler (event) {
+    function dragEnterHandler(event) {
         event.preventDefault()
         event.stopPropagation()
         setDragEnter(true)
     }
 
-    function dragLeaveHandler (event) {
+    function dragLeaveHandler(event) {
         event.preventDefault()
         event.stopPropagation()
         setDragEnter(false)
     }
 
-    function dropHandler (event) {
+    function dropHandler(event) {
         event.preventDefault()
         event.stopPropagation()
         let files = [...event.dataTransfer.files]
@@ -63,11 +64,11 @@ const Disk = () => {
                 <div className="disk__btns">
                     <button className="disk__back"
                             onClick={() => backClickHandler()}
-                    >Назад
+                    >Back
                     </button>
                     <button className="disk__create"
                             onClick={() => showPopupHandler()}
-                    >Создать папку
+                    >Create folder
                     </button>
                     <div className="disk__upload">
                         <label htmlFor='disk__upload-input' className='disk__upload-label'>Download file</label>
@@ -76,6 +77,15 @@ const Disk = () => {
                             onChange={(event) => fileUploadHandler(event)}
                             type="file" id='disk__upload-input' className='disk__upload-input'/>
                     </div>
+
+                    <select className='disk__select'
+                            value={sort}
+                            onChange={(e) => setSort(e.target.value)}
+                    >
+                        <option value="name">By name</option>
+                        <option value="type">By type</option>
+                        <option value="date">By date</option>
+                    </select>
                 </div>
                 <FileList/>
                 <Popup/>
