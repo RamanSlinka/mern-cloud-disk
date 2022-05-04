@@ -7,6 +7,16 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const FileList = () => {
     const files = useSelector(state => state.files.files)
+
+    if(files.length === 0){
+        return (
+            <div className='loader'>
+                <h3>Files not found</h3>
+            </div>
+        )
+    }
+
+
     return (
         <div className='filelist'>
             <div className="filelist__header">
