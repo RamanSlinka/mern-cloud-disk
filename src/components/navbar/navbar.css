@@ -9,6 +9,8 @@
   width: 70px;
 }
 
+
+
 .navbar__header {
   margin-left: 10px;
   font-size: 24px;
@@ -17,6 +19,12 @@
 .navbar__login {
   margin-left: auto;
   margin-right: 20px;
+}
+
+.navbar__search{
+  width: 200px;
+  margin-left: 20px;
+
 }
 .container {
   width: 1140px;
