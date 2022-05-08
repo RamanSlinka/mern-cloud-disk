@@ -5,34 +5,67 @@
     grid-template-columns: 1fr 4fr repeat(4, 1fr);
     align-items: center;
 }
+
 .file:hover {
     transform: scale(1.02);
 }
+
 .file__img {
     justify-self: center;
 }
+
 .file__date {
     grid-column-start: 5;
     justify-self: center;
 }
+
 .file__size {
     grid-column-start: 6;
     justify-self: center;
 }
+
 .file__btn {
     display: none;
 }
+
 .file:hover .file__date {
     grid-column-start: 3;
 }
+
 .file:hover .file__size {
     grid-column-start: 4;
 }
+
 .file:hover .file__download {
     grid-column-start: 5;
     display: block;
 }
+
 .file:hover .file__delete {
     grid-column-start: 6;
     display: block;
+}
+
+
+.file-plate {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-plate__btns {
+    display: none;
+}
+
+.file-plate:hover .file-plate__btns{
+    display: flex;
+}
+
+
+.file-plate__img {
+    width: 100px;
+    height: 100px;
 }

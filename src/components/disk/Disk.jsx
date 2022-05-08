@@ -4,8 +4,9 @@ import {getFiles, uploadFile} from "../../actions/files";
 import FileList from "./fileList/FileList";
 import './disk.css'
 import Popup from "./Popup";
-import {setCurrentDir, setPopupDisplay} from "../../reducers/fileReducer";
+import {setCurrentDir, setFileView, setPopupDisplay} from "../../reducers/fileReducer";
 import Uploader from "../uploader/Uploader";
+import {BsListTask,  BsGrid3X3Gap} from "react-icons/bs";
 
 
 const Disk = () => {
@@ -112,6 +113,15 @@ const Disk = () => {
                         <option value="type">By type</option>
                         <option value="date">By date</option>
                     </select>
+
+                    <div  onClick={() => dispatch(setFileView('plate'))}>
+                        <BsGrid3X3Gap className="disk__plate"/>
+                    </div>
+                    <div  onClick={() => dispatch(setFileView('list'))}>
+                        <BsListTask className="disk__list"/>
+                    </div>
+
+
                 </div>
                 <FileList/>
                 <Popup/>

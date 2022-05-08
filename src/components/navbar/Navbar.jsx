@@ -12,8 +12,6 @@ const Navbar = () => {
     const isAuth = useSelector(state => state.user.isAuth)
 
 
-    const isAuth2 = useSelector(state => state.user.isAuth)
-
 
     const currentDir = useSelector(state => state.files.currentDir)
     const dispatch = useDispatch()
