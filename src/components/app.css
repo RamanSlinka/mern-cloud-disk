@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #566885;
 }
 body {
   background-color: #E9E6E6;
@@ -27,4 +26,12 @@ input {
   background: transparent;
   width: 70%;
   padding: 3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
