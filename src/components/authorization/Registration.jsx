@@ -1,24 +1,39 @@
 import React, {useState} from 'react';
-import './authorization.css'
 import Input from "../input/Input";
 import {registration} from "../../actions/user";
+import style from "./authorization.module.scss";
 
 const Registration = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+const registrationClickHandler = () => {
+    registration(email, password)
+    setEmail('')
+    setPassword('')
+}
     return (
-        <div className='authorization'>
-            <div className='registration__header'>Registration</div>
-            <Input value={email} setValue={setEmail}
-                   type='text' placecholder='Enter email'/>
-            <Input value={password} setValue={setPassword}
-                   type='password' placecholder={"Enter password"}/>
-            <button
-                onClick={() => registration(email, password)}
-                className='authorization__btn'>Sign Up</button>
-        </div>
+
+
+
+            <div className={`${style.containerForm} ${style.containerSignup}`}>
+
+                <form action="#" className={style.form}>
+                    <h2 className={style.formTitle}>Sign Up</h2>
+                    <h4>Create your account</h4>
+                    <Input
+                        value={email} setValue={setEmail}
+                        type="text" placeholder="Email" className={style.input}/>
+                    <Input
+                        value={password} setValue={setPassword}
+                        type="email" placeholder="Password" className={style.input}/>
+                    <button
+                        onClick={() => registrationClickHandler()
+                    }
+                        className={style.btn}>Sign Up</button>
+                </form>
+            </div>
+
     );
 };
 
