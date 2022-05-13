@@ -20,7 +20,7 @@ const registrationClickHandler = () => {
 
                 <form action="#" className={style.form}>
                     <h2 className={style.formTitle}>Sign Up</h2>
-                    <h4>Create your account</h4>
+                    <h4 className={style.link}>Create your account</h4>
                     <Input
                         value={email} setValue={setEmail}
                         type="text" placeholder="Email" className={style.input}/>

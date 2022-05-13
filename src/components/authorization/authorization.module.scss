@@ -63,15 +63,17 @@
 }
 
 .formTitle {
-  font-weight: 300;
+  font-weight: 500;
+  color: var(--white);
   margin: 0;
   margin-bottom: 1.25rem;
 }
 
 .link {
-  color: var(--gray);
+  color: var(--white);
   font-size: 0.9rem;
-  margin: 1.5rem 0;
+  font-weight: 500;
+ // margin: 1.5rem 0;
   text-decoration: none;
 }
 
@@ -215,7 +217,7 @@
 }
 
 .form {
-  background-color: var(--white);
+  background-color: rgb(151, 165, 168);
   display: flex;
   align-items: center;
   justify-content: center;

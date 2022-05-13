@@ -20,8 +20,6 @@ const loginClickHandler = () => {
 
     return (
         <div className={style.body}>
-
-
             <div
                 className={
                     registration ?
@@ -29,8 +27,6 @@ const loginClickHandler = () => {
                         : style.container
                 }
             >
-
-
                 {/*Sign In*/}
                 {!registration
                     ?
@@ -54,8 +50,6 @@ const loginClickHandler = () => {
                     :
                     <Registration/>
                 }
-
-
                 {/*Overlay*/}
                 <div className={style.containerOverlay}>
                     <div className={style.overlay}>
@@ -78,7 +72,6 @@ const loginClickHandler = () => {
                     </div>
                 </div>
             </div>
-
 
         </div>
     );
