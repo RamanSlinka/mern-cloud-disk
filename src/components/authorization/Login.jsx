@@ -49,7 +49,10 @@ const loginClickHandler = () => {
                     </div>
                     :
                     <Registration/>
+
                 }
+
+                <Registration/>
                 {/*Overlay*/}
                 <div className={style.containerOverlay}>
                     <div className={style.overlay}>
