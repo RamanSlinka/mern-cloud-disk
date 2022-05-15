@@ -34,7 +34,12 @@ const File = ({file}) => {
             <div className='file'
                  onClick={() => openDirHandler(file)}
             >
-                {file.type === 'dir' ? <FcOpenedFolder className='file__img'/> : <FcFile className='file__img'/>}
+                {file.type === 'dir'
+                    ?
+                    <FcOpenedFolder className='file__img'/>
+                    :
+                    <FcFile className='file__img'/>
+                }
                 <div className="file__name">{file.name}</div>
                 <div className="file__date">{file.date.slice(0, 10)}</div>
                 <div className="file__size">{sizeFormat(file.size)}</div>
@@ -55,10 +60,13 @@ const File = ({file}) => {
             <div className='file-plate'
                  onClick={() => openDirHandler(file)}
             >
-                {file.type === 'dir' ? <FcOpenedFolder className='file-plate__img'/> :
-                    <FcFile className='file-plate__img'/>}
+                {file.type === 'dir'
+                    ?
+                    <FcOpenedFolder className='file-plate__img'/>
+                    :
+                    <FcFile className='file-plate__img'/>
+                }
                 <div className="file__name">{file.name}</div>
-
                 <div className='file-plate__btns'> {file.type !== 'dir' &&
                     <button
                         onClick={(e) => downloadClickHandler(e)}
