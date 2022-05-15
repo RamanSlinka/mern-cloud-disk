@@ -33,10 +33,12 @@ const loginClickHandler = () => {
                     <div className={`${style.containerForm} ${style.containerSignin}`}>
                         <form action="#" className={style.form}>
                             <h2 className={style.formTitle}>Sign In</h2>
+
                             <Input
                                 value={email}
                                 setValue={setEmail}
                                 type="email" placeholder="Email" className={style.input}/>
+                            <span className={style.dividingLine}>  </span>
                             <Input
                                 value={password}
                                 setValue={setPassword}
@@ -52,7 +54,6 @@ const loginClickHandler = () => {
 
                 }
 
-                <Registration/>
                 {/*Overlay*/}
                 <div className={style.containerOverlay}>
                     <div className={style.overlay}>

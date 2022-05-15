@@ -228,11 +228,15 @@
 }
 
 .input {
+  outline: none;
   background-color: #fff;
   border: none;
   padding: 0.9rem 0.9rem;
-  margin: 0.5rem 0;
+  margin:  0;
   width: 100%;
+}
+.dividingLine{
+  margin: 10px;
 }
 
 @keyframes show {

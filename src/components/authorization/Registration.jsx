@@ -24,6 +24,7 @@ const registrationClickHandler = () => {
                     <Input
                         value={email} setValue={setEmail}
                         type="text" placeholder="Email" className={style.input}/>
+                    <span className={style.dividingLine}>  </span>
                     <Input
                         value={password} setValue={setPassword}
                         type="email" placeholder="Password" className={style.input}/>
