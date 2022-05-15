@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import Input from "../input/Input";
+import Input from "../../input/Input";
+import style from './popup.module.scss';
 import {useDispatch, useSelector} from "react-redux";
-import {setPopupDisplay} from "../../reducers/fileReducer";
-import {createDir} from "../../actions/files";
+import {setPopupDisplay} from "../../../reducers/fileReducer";
+import {createDir} from "../../../actions/files";
 
 const Popup = () => {
     const [dirName, setDirName] = useState('');
@@ -17,26 +18,25 @@ const Popup = () => {
     }
 
     return (
-        <div className='popup'
+        <div className={style.popup}
              onClick={() => dispatch(setPopupDisplay('none'))}
              style={{display: popupDisplay}}>
-            <div className='popup__content'
+            <div className={style.popup__content}
                  onClick={(event) => event.stopPropagation()}
             >
-                <div className='popup__header'>
-                    <div className='popup__title'>
-                        Create folder
-                    </div>
-                    <button className='popup__close'
+                <div className={style.popup__header}>
+                    <div> Create folder</div>
+                    <button className={style.popup__close}
                             onClick={() => dispatch(setPopupDisplay('none'))}
                     >X
                     </button>
                 </div>
-                <Input type="text" placeholder='Enter  folder name'
+                <Input type="text" placeholder='Enter folder name'
                        value={dirName}
                        setValue={setDirName}/>
-                <button className='popup__create'
+                <button className={style.popup__create}
                         onClick={() => createHandler()}
+
                 >Create
                 </button>
             </div>
