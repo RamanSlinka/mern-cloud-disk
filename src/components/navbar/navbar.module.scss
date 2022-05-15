@@ -68,18 +68,19 @@ a {
 }
 
 .navbar__avatarWrapper {
-  width: 100px;
+  width: 45px;
+  margin-top: 4px;
+  .navbar__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 }
 
-.navbar__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
+
 
 .container {
   width: 1140px;
   display: flex;
   align-items: center;
-  /*color: #E9E6E6;*/
 }
