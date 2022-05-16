@@ -106,7 +106,7 @@ const Disk = () => {
                                     value={sort}
                                     onChange={(e) => setSort(e.target.value)}
                             >
-                                <option   autofocus={true} disabled={true} >Select</option>
+                                <option autofocus={true} disabled={true}>Select</option>
                                 <option value="name">By name</option>
                                 <option value="type">By type</option>
                                 <option value="date">By date</option>
@@ -131,7 +131,7 @@ const Disk = () => {
                        onDragOver={dragEnterHandler}
                        onDrop={dropHandler}
                 >
-                    <p>drag files here</p>
+                    <p>Drag files here</p>
                 </div>
             }
         </div>

@@ -1,31 +1,3 @@
-//.authorization {
-//    display: flex;
-//    flex-direction: column;
-//    width: 500px;
-//    align-items: center;
-//    background-color: white;
-//    border-radius: 20px;
-//    padding: 30px;
-//    align-self: center;
-//    margin-top: 100px;
-//}
-//.authorizationHeader {
-//    font-size: 30px;
-//    font-weight: 700;
-//}
-//.authorization input {
-//    margin: 10px 20px;
-//}
-//.authorizationBtn {
-//    border: none;
-//    background-color: #566885;
-//    border-radius: 8px;
-//    color: white;
-//    font-weight: 700;
-//    padding: 5px 10px;
-//    align-self: flex-end;
-//    margin-top: 10px;
-//}
 
 
 :root {
@@ -65,7 +37,6 @@
 .formTitle {
   font-weight: 500;
   color: var(--white);
-  margin: 0;
   margin-bottom: 1.25rem;
 }
 
@@ -108,7 +79,6 @@
 
 .containerSignup {
   left: 0;
-  // opacity: 0;
   width: 50%;
   z-index: 1;
 }

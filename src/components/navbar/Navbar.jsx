@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from '../../assets/img/cloud-disk-logo.jpg'
 import style from './navbar.module.scss'
-
+import styleInput from '../authorization/authorization.module.scss'
 import {NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../reducers/userReducer";
@@ -10,7 +10,6 @@ import {showLoader} from "../../reducers/appReducer";
 import avatarLogo from '../../assets/img/logo-avata.png'
 import {API_URL} from "../../config.js";
 import {VscSearch} from "react-icons/vsc";
-import Input from "../input/Input";
 
 const Navbar = () => {
 
@@ -53,10 +52,10 @@ const Navbar = () => {
                         <div>
                             <VscSearch className={style.navbar__SearchImg}/>
                         </div>
-                        <Input
+                        <input
                             value={searchName}
                             onChange={(e) => searchChangeHandler(e)}
-                            className={style.navbar__search}
+                            className={`${style.navbar__search} ${styleInput.input}`}
                             type='text'
                             placeholder='Search on disk...'/>
                     </div>}
