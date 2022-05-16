@@ -1,0 +1,47 @@
+.notFound{
+    font-size: 30px;
+}
+
+.filePlate{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+
+.fileList {
+    margin: 20px 0;
+    .fileList__header {
+        display: grid;
+        grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    }
+    .fileList__name {
+        grid-column-start: 2;
+    }
+    .fileList__date {
+        grid-column-start: 5;
+        justify-self: center;
+    }
+    .fileList__size {
+        grid-column-start: 6;
+        justify-self: center;
+    }
+}
+
+
+
+
+.file-enter-active{
+    animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

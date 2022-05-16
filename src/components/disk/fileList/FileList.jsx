@@ -1,7 +1,8 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import File from "./file/File";
-import './fileList.css'
+import style from './fileList.module.scss';
+import styleLoader from '../../loader/loader.module.scss';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 
@@ -11,15 +12,15 @@ const FileList = () => {
 
     if(files.length === 0){
         return (
-            <div className='loader'>
-                <h3>Files not found</h3>
+            <div className={styleLoader.loader}>
+                <h3 className={style.notFound}>Files not found</h3>
             </div>
         )
     }
 
     if(fileView === 'plate') {
         return (
-            <div className='filePlate'>
+            <div className={style.filePlate}>
                     {files.map(file =>
                             <File
                                 key={file._id}
@@ -31,11 +32,11 @@ const FileList = () => {
 
     if(fileView === 'list') {
         return (
-            <div className='filelist'>
-                <div className="filelist__header">
-                    <div className="filelist__name">Title</div>
-                    <div className="filelist__date">Date</div>
-                    <div className="filelist__size">Size</div>
+            <div className={style.fileList}>
+                <div className={style.fileList__header}>
+                    <div className={style.fileList__name}>Title</div>
+                    <div className={style.fileList__date}>Date</div>
+                    <div className={style.fileList__size}>Size</div>
                 </div>
                 <TransitionGroup>
                     {files.map(file =>
