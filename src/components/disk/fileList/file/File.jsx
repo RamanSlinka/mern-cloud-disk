@@ -1,10 +1,12 @@
 import React from 'react';
 import {FcFile, FcOpenedFolder} from "react-icons/fc";
-import './file.css'
+import style from './file.module.scss'
 import {pushToStack, setCurrentDir} from "../../../../reducers/fileReducer";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteFile, downloadFile} from "../../../../actions/files";
 import sizeFormat from "../../../../utils/sizeFormat";
+import {FaCloudDownloadAlt} from "react-icons/fa";
+import {RiDeleteBin5Fill} from "react-icons/ri";
 
 const File = ({file}) => {
     const dispatch = useDispatch();
@@ -31,25 +33,28 @@ const File = ({file}) => {
 
     if (fileView === 'list') {
         return (
-            <div className='file'
+            <div className={style.file}
                  onClick={() => openDirHandler(file)}
             >
                 {file.type === 'dir'
                     ?
-                    <FcOpenedFolder className='file__img'/>
+                    <FcOpenedFolder className={style.file__img}/>
                     :
-                    <FcFile className='file__img'/>
+                    <FcFile className={style.file__img}/>
                 }
-                <div className="file__name">{file.name}</div>
-                <div className="file__date">{file.date.slice(0, 10)}</div>
-                <div className="file__size">{sizeFormat(file.size)}</div>
+                <div className={style.file__name}>{file.name}</div>
+                <div className={style.file__date}>{file.date.slice(0, 10)}</div>
+                <div className={style.file__size}>{sizeFormat(file.size)}</div>
 
                 {file.type !== 'dir' && <button
                     onClick={(e) => downloadClickHandler(e)}
-                    className='file__btn file__download'> Download </button>}
+                    className={`${style.file__btn} ${style.file__download}`}>
+                    <FaCloudDownloadAlt className={style.filePlate__btns__ico}/>
+                </button>}
                 <button
                     onClick={(e) => deleteClickHandler(e)}
-                    className='file__btn file__delete'> Delete
+                    className={`${style.file__btn} ${style.file__delete}`}>
+                    <RiDeleteBin5Fill className={style.filePlate__btns__ico}/>
                 </button>
             </div>
         );
@@ -57,23 +62,28 @@ const File = ({file}) => {
 
     if (fileView === 'plate') {
         return (
-            <div className='file-plate'
+            <div className={style.filePlate}
                  onClick={() => openDirHandler(file)}
             >
                 {file.type === 'dir'
                     ?
-                    <FcOpenedFolder className='file-plate__img'/>
+                    <FcOpenedFolder className={style.filePlate__img}/>
                     :
-                    <FcFile className='file-plate__img'/>
+                    <FcFile className={style.filePlate__img}/>
                 }
-                <div className="file__name">{file.name}</div>
-                <div className='file-plate__btns'> {file.type !== 'dir' &&
+                <div className={style.file__name}>{file.name}</div>
+                <div className={style.filePlate__btns}> {file.type !== 'dir' &&
                     <button
                         onClick={(e) => downloadClickHandler(e)}
-                        className='file-plate__btn file__download'> Download </button>}
+                        className={`${style.filePlate__btns} ${style.file__download}`}>
+                        <FaCloudDownloadAlt className={style.filePlate__btns__ico}/>
+                    {/* download*/}
+                    </button>}
                     <button
                         onClick={(e) => deleteClickHandler(e)}
-                        className='file-plate__btn file__delete'> Delete
+                        className={`${style.filePlate__btns} ${style.file__delete}`}>
+                        <RiDeleteBin5Fill className={style.filePlate__btns__ico}/>
+                    {/* delete*/}
                     </button>
                 </div>
             </div>
