@@ -8,42 +8,100 @@ a {
   height: 70px;
   justify-content: center;
   background-color: #303942;
-  width: 100%;
+  max-width: 100%;
   font-family: Kanit;
   color: #E9E6E6;
+  @media screen and (max-width: 600px) {
+    height: 50px;
+    justify-content: space-evenly;
+  }
+
+  .container {
+    width: 1140px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1140px) {
+      width: 740px;
+    }
+    @media screen and (max-width: 720px) {
+      justify-content: space-evenly;
+    }
+
+    .navbar__Logo {
+      height: 70px;
+      @media screen and (max-width: 600px) {
+        height: 50px;
+      }
+    }
+
+    .navbar__Header {
+      margin-left: 10px;
+      font-size: 30px;
+      font-weight: 500;
+      @media screen and (max-width: 720px) {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+      @media screen and (max-width: 460px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 10px;
+        font-weight: 400;
+      }
+    }
+
+    .navbar__login {
+      display: flex;
+      justify-content: center;
+      width: 100px;
+      margin-left: auto;
+      margin-right: 30px;
+      border: #E9E6E6 1px solid;
+      padding: 5px;
+      @media screen and (max-width: 720px) {
+        font-size: 12px;
+        margin: 0 10px;
+        width: 60px;
+      }
+      @media screen and (max-width: 460px) {
+        font-size: 10px;
+      }
+    }
+
+    .navbar__registration {
+      display: flex;
+      justify-content: center;
+      width: 100px;
+      border: #E9E6E6 1px solid;
+      padding: 5px;
+      @media screen and (max-width: 720px) {
+        font-size: 12px;
+        margin: 0 10px;
+        width: 60px;
+      }
+      @media screen and (max-width: 460px) {
+        font-size: 10px;
+      }
+    }
+
+    .navbar__avatarWrapper {
+      width: 45px;
+      margin-top: 4px;
+
+      .navbar__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @media screen and (max-width: 600px) {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
 }
 
-.navbar__Logo {
-  height: 70px;
-}
-
-
-.navbar__Header {
-  margin-left: 10px;
-  font-size: 30px;
-  font-weight: 500;
-
-}
-
-.navbar__login {
-  display: flex;
-  justify-content: center;
-
-  width: 100px;
-  margin-left: auto;
-  margin-right: 30px;
-
-  border: #E9E6E6 1px solid;
-  padding: 5px;
-}
-
-.navbar__registration {
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  border: #E9E6E6 1px solid;
-  padding: 5px;
-}
 
 .navbar__SearchWrapper {
   display: flex;
@@ -52,12 +110,23 @@ a {
   width: 200px;
   margin-left: 40px;
   background-color: #fff;
+  @media screen and (max-width: 600px) {
+    width: 100px;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-left: 10px;
+  }
 }
 
 .navbar__SearchImg {
-  padding: 12px 0  0 10px;
+  padding: 12px 0 0 10px;
   font-size: 30px;
   color: #0a0a0a;
+  @media screen and (max-width: 600px) {
+    padding: 10px 0 0 3px;
+    font-size: 25px;
+  }
 }
 
 .navbar__search {
@@ -67,20 +136,7 @@ a {
   color: #303942;
 }
 
-.navbar__avatarWrapper {
-  width: 45px;
-  margin-top: 4px;
-  .navbar__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-}
 
 
 
-.container {
-  width: 1140px;
-  display: flex;
-  align-items: center;
-}
+
