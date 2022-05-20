@@ -12,6 +12,8 @@ import Loader from "../loader/Loader";
 
 const Disk = () => {
 
+    // sorry but today is friday :)
+
     const dispatch = useDispatch();
     const currentDir = useSelector(state => state.files.currentDir)
     const dirStack = useSelector(state => state.files.dirStack)
@@ -66,6 +68,8 @@ const Disk = () => {
             </>
         )
     }
+
+
 
 
     return (
