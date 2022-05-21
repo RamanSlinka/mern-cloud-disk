@@ -1,11 +1,12 @@
 .container {
   width: 1140px;
   display: flex;
-  align-items: center;
-
+  margin: 0 auto;
+  @media screen and (max-width: 1140px) {
+    width: 740px;
+  }
   .disk {
     margin-top: 20px;
-
     .disk__btns {
       display: flex;
       flex-direction: row;
