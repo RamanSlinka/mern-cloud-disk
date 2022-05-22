@@ -1,14 +1,27 @@
 .container {
   width: 1140px;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   margin-top: 20px;
+  @media screen and (max-width: 1140px) {
+    width: 740px;
+
+  } @media screen and (max-width: 740px) {
+    width: 540px;
+  justify-content: flex-start;
+  h3{
+    font-size: 12px;
+  }
+  }
 }
 
 .btn__back {
   padding: 5px;
   width: 80px;
-
+  @media screen and (max-width: 540px) {
+    width: 60px;
+  }
 
   .btn__back_ico {
     font-size: 20px;
@@ -18,9 +31,12 @@
 .avatarWrapper {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 200px;
   margin: 0 20px;
-
+  @media screen and (max-width: 540px) {
+    width: 130px;
+  }
   .avatar {
   }
 

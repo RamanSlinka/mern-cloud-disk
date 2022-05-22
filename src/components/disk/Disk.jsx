@@ -87,7 +87,6 @@ const Disk = () => {
                         </button>
 
                         <button className={style.btn}
-                                // style={{width: '200px'}}
                                 onClick={() => showPopupHandler()}
                         >Create folder
                         </button>
