@@ -71,19 +71,20 @@ const File = ({file}) => {
                     :
                     <FcFile className={style.filePlate__img}/>
                 }
-                <div className={style.file__name}>{file.name}</div>
+                <div className={style.file__name}
+                     style={{textAlign: 'center'}}>{file.name}</div>
                 <div className={style.filePlate__btns}> {file.type !== 'dir' &&
                     <button
                         onClick={(e) => downloadClickHandler(e)}
                         className={`${style.filePlate__btns} ${style.file__download}`}>
                         <FaCloudDownloadAlt className={style.filePlate__btns__ico}/>
-                    {/* download*/}
+                        {/* download*/}
                     </button>}
                     <button
                         onClick={(e) => deleteClickHandler(e)}
                         className={`${style.filePlate__btns} ${style.file__delete}`}>
                         <RiDeleteBin5Fill className={style.filePlate__btns__ico}/>
-                    {/* delete*/}
+                        {/* delete*/}
                     </button>
                 </div>
             </div>
