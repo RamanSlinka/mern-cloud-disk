@@ -80,13 +80,14 @@ const Disk = () => {
                      onDragOver={dragEnterHandler}
                 >
                     <div className={style.disk__btns}>
+
                         <button className={style.btn}
                                 onClick={() => backClickHandler()}
                         >Back
                         </button>
 
                         <button className={style.btn}
-                                style={{width: '200px'}}
+                                // style={{width: '200px'}}
                                 onClick={() => showPopupHandler()}
                         >Create folder
                         </button>
@@ -103,6 +104,8 @@ const Disk = () => {
                                 id='disk__upload-input'
                                 className={style.disk__uploadInput}/>
                         </div>
+
+
 
                         <div className={style.filters}>
                             <select className={style.disk__select}
