@@ -17,6 +17,9 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 600px) {
+      width: 300px;
+    }
 
     .popup__header {
       display: flex;
@@ -44,6 +47,9 @@
       cursor: pointer;
       padding: 0.5rem 2rem;
       margin-top: 20px;
+      @media screen and (max-width: 600px) {
+        padding: 0.5rem 1rem;
+      }
 
       &:hover {
         border: 2px solid var(--white);

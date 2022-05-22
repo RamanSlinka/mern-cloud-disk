@@ -1,65 +1,91 @@
 
+.uploader {
+  width: 300px;
 
-.uploader{
-    width: 300px;
-    position: fixed;
-    background: rgb(151, 165, 168);
-    top: 90px;
-    right: 20px;
-    padding: 20px;
-    overflow-y: auto;
-    .uploader__header{
-        display: flex;
-        justify-content: space-between;
+  position: fixed;
+  background: rgb(151, 165, 168);
+  top: 90px;
+  right: 20px;
+  padding: 20px;
+  overflow-y: auto;
+
+  @media screen and (max-width: 1700px) {
+    width: 250px;
+  }
+  @media screen and (max-width: 1620px) {
+    height: 300px;
+    top: auto;
+    bottom: 20px;
+  }
+
+  .uploader__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .uploader__title {
+    font-size: 1.2rem;
+  }
+
+  .uploader__close {
+    padding: 0 7px;
+    background: #c01b1b;
+    border: #960202 2px solid;
+    color: var(--white);
+
+    &:active {
+      transform: scale(0.95);
     }
-    .uploader__title{
-        font-size: 1.2rem;
-    }
-    .uploader__close{
-        padding: 0 7px;
-        background: #c01b1b;
-        border: #960202 2px solid;
-        color: var(--white);
-        &:active {
-            transform: scale(0.95);
-        }
-    }
+  }
 }
 
 
+.uploadFile {
+  background: rgb(255, 255, 255);
+  margin: 25px 0;
+  padding: 5px 10px;
+  @media screen and (max-width: 600px) {
+    margin: 10px 0;
+    padding: 2px 5px;
+  }
 
-
-.uploadFile{
-    background: rgb(255, 255, 255);
-    margin: 25px 0;
-    padding: 5px 10px;
-
-    .uploadFile__header{
-        margin-top: 5px;
-        display: flex;
-        justify-content: space-between;
-        .uploadFile__close{
-            padding-bottom: 3px;
-        }
-    }
-    .uploadFile__progressBar{
-        height: 1rem;
-        border-radius: 8px;
-        background-color: #aba7a7;
-        display: flex;
-        margin: 13px 0;
-    }
-    .uploadFile__uploadBar{
-        background-color: #208f22;
-        border-radius: 8px;
-    }
-
-    .uploadFile__percent{
-        color: #ffffff;
-        left: 48%;
-        position: absolute;
+  .uploadFile__header {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 600px) {
+      .title {
         font-size: 12px;
+      }
     }
+
+    .uploadFile__close {
+      padding-bottom: 3px;
+    }
+  }
+
+  .uploadFile__progressBar {
+    height: 1rem;
+    border-radius: 8px;
+    background-color: #aba7a7;
+    display: flex;
+    margin: 13px 0;
+    @media screen and (max-width: 600px) {
+      margin: 7px 0;
+    }
+  }
+
+  .uploadFile__uploadBar {
+    background-color: #208f22;
+    border-radius: 8px;
+  }
+
+  .uploadFile__percent {
+    color: #ffffff;
+    left: 48%;
+    position: absolute;
+    font-size: 12px;
+  }
 }
 
 

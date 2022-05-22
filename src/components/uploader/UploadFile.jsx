@@ -10,7 +10,7 @@ const UploadFile = ({file}) => {
     return (
         <div className={style.uploadFile}>
             <div className={style.uploadFile__header}>
-                <div>{file.name}</div>
+                <div className={style.title}>{file.name}</div>
                 <button
                     onClick={() => dispatch(removeUploadFile(file.id))}
                     className={`${style.uploader__close} ${style.uploadFile__close}`}
