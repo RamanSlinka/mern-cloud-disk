@@ -12,7 +12,7 @@ const FileList = () => {
 
     if(files.length === 0){
         return (
-            <div className={styleLoader.loader}>
+            <div className={styleLoader.loaderWrapper}>
                 <h3 className={style.notFound}>Files not found</h3>
             </div>
         )
