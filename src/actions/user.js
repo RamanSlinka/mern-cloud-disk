@@ -38,7 +38,6 @@ export const auth =  () => {
             localStorage.setItem('token', response.data.user)
 
         } catch (error) {
-            alert(error.response.data.message)
             localStorage.removeItem('token')
         }
     }
@@ -48,6 +47,7 @@ export const uploadAvatar =  (file) => {
     return async dispatch => {
         try {
             const formData = new FormData()
+            formData.append('file', file)
             const response = await axios.post(`${API_URL}api/files/avatar`, formData,
                 {headers: {Authorisation: `Bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data))
