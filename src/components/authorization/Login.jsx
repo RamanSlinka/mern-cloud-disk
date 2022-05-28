@@ -31,7 +31,7 @@ const loginClickHandler = () => {
                 {!registration
                     ?
                     <div className={`${style.containerForm} ${style.containerSignin}`}>
-                        <form action="#" className={style.form}>
+                        <div className={style.form}>
                             <h2 className={style.formTitle}>Sign In</h2>
 
                             <Input
@@ -47,7 +47,7 @@ const loginClickHandler = () => {
                                 onClick={() => loginClickHandler()}
                                 className={style.btn}>Sign In
                             </button>
-                        </form>
+                        </div>
                     </div>
                     :
                     <Registration/>
