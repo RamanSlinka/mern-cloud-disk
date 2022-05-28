@@ -7,6 +7,7 @@ import avatarLogo from "../../assets/img/logo-avata.png";
 import style from './profile.module.scss';
 import styleBtn from '../authorization/authorization.module.scss'
 import {RiArrowGoBackFill, RiDeleteBin5Fill} from "react-icons/ri";
+import AboutApp from "../aboutApp/AboutApp";
 
 const Profile = () => {
 
@@ -21,6 +22,7 @@ const Profile = () => {
     }
 
     return (
+        <>
         <div className={style.container}>
             <div>
                 <NavLink to={'/'}>
@@ -55,7 +57,10 @@ const Profile = () => {
             <div>
               <h3> User:  {user}</h3>
             </div>
+
         </div>
+         <AboutApp/>
+        </>
     );
 };
 
