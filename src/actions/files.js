@@ -24,7 +24,7 @@ export function getFiles(dirId,sort) {
                 })
             dispatch(setFiles(response.data))
         } catch (e) {
-            alert(e.response.data.message)
+            alert(`'getFiles' ${e.response.data.message}`)
         } finally {
             dispatch(hideLoader())
         }
@@ -134,9 +134,9 @@ export function searchFiles(search) {
             })
             dispatch(setFiles(response.data))
 
-            alert(response.data.message)
+            console.log(`'searchFiles' ${response.data.message}`)
         } catch (e) {
-            alert(e?.response?.data?.message)
+            alert(`'searchFiles' ${e?.response?.data?.message}`)
         } finally {
             dispatch(hideLoader())
         }

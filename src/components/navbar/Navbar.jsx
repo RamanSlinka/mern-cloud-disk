@@ -20,12 +20,12 @@ const Navbar = () => {
     const [searchName, setSearchName] = useState('')
     const [searchTimeout, setSearchTimeout] = useState(false)
     const avatar = currentUser.avatar ? `${API_URL + currentUser.avatar}` : avatarLogo
-    console.log(currentUser.avatar)
+   // console.log(currentUser.avatar)
 
     function searchChangeHandler(e) {
         setSearchName(e.target.value)
 
-        if (!searchTimeout) {
+        if (searchTimeout !== false) {
             clearTimeout(searchTimeout)
         }
         dispatch(showLoader())
