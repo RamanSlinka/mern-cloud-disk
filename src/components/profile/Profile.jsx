@@ -17,7 +17,8 @@ const Profile = () => {
     const dispatch = useDispatch()
 
     function changeHandler(e) {
-        const file = e.target.file[0]
+        const file = e.target.files[0]
+        console.log(e.target.files[0])
         dispatch(uploadAvatar(file))
     }
 
@@ -47,7 +48,7 @@ const Profile = () => {
                         style={{padding: 0}}
                     ><p className={style.uploadAvatar}>Upload avatar</p>
                     <input
-                        onChange={(e) => changeHandler(e)}
+                        onChange={e => changeHandler(e)}
                         accept='image/*'
                         type="file"
                         placeholder='Upload avatar'/>

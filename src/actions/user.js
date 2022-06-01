@@ -35,6 +35,7 @@ export const auth =  () => {
             const response = await axios.get('http://localhost:5000/api/auth/auth',
                 {headers: {Authorisation: `Bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
+            console.log(response.data.user)
             localStorage.setItem('token', response.data.token)
 
         } catch (error) {
@@ -50,6 +51,7 @@ export const uploadAvatar =  (file) => {
             formData.append('file', file)
             const response = await axios.post(`${API_URL}api/files/avatar`, formData,
                 {headers: {Authorisation: `Bearer ${localStorage.getItem('token')}`}})
+
             dispatch(setUser(response.data))
         } catch (error) {
             console.log(error)
