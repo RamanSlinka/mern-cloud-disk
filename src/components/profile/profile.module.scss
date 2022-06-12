@@ -38,6 +38,10 @@
     width: 130px;
   }
   .avatar {
+    height: 200px;
+    @media screen and (max-width: 540px) {
+      height: 100px;
+    }
   }
 
   .btnsBlock {

@@ -30,6 +30,7 @@ const AboutApp = () => {
                     <li>Working with the server. Axios. Indication of loading data from the server.</li>
                     <li>SCSS.Module components.</li>
                     <li>Library React icons.</li>
+                    <li>Unit tests - Jest</li>
                 </ul>
               </div>
                 <div>
@@ -53,34 +54,3 @@ const AboutApp = () => {
 };
 
 export default AboutApp;
-
-
-//
-// function debounce(f, ms) {
-//     let isCooldown = false;
-//     return () => {
-//         console.log('is', isCooldown)
-//         if (isCooldown) return;
-//         f.apply(this, arguments);
-//         isCooldown = true;
-//         setTimeout(() => isCooldown = false, ms);
-//     };
-// }
-//
-// function searchChangeHandler(e) {
-//     setSearchName(e.target.value)
-//
-//     if (!searchTimeout) {
-//         clearTimeout(searchTimeout)
-//     }
-//     dispatch(showLoader())
-//     if (e.target.value !== '') {
-//         debounce(dispatch(searchFiles(e.target.value)), 1000)
-//
-//         /*setSearchTimeout(setTimeout((value) => {
-//             dispatch(searchFiles(value))
-//         }, 1000, e.target.value))*/
-//     } else {
-//         dispatch(getFiles(currentDir))
-//     }
-// }

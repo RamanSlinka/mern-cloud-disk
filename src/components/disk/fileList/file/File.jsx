@@ -28,7 +28,7 @@ const File = ({file}) => {
     function deleteClickHandler(e) {
         e.stopPropagation()
         dispatch(deleteFile(file))
-        debugger
+
     }
 
     if (fileView === 'list') {
