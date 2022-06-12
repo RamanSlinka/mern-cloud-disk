@@ -5,7 +5,7 @@ import {API_URL} from "../config";
 
 export const registration = async (email, password) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/auth/registration', {
+        const response = await axios.post(`${API_URL}api/auth/registration`, {
             email, password
         })
         alert(response.data.message)
@@ -17,7 +17,7 @@ export const registration = async (email, password) => {
 export const login =  (email, password) => {
     return async dispatch => {
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
+            const response = await axios.post(`${API_URL}api/auth/login`, {
                 email, password
             })
             dispatch(setUser(response.data.user))
@@ -32,7 +32,7 @@ export const login =  (email, password) => {
 export const auth =  () => {
     return async dispatch => {
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/auth',
+            const response = await axios.get(`${API_URL}/api/auth/auth`,
                 {headers: {Authorisation: `Bearer ${localStorage.getItem('token')}`}})
             dispatch(setUser(response.data.user))
             console.log(response.data.user)
