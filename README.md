@@ -9,7 +9,11 @@ Initially, you can register and create your account. After login there
 In the application, you can create your own folder
 ![folder](https://user-images.githubusercontent.com/80674763/173238292-d09a96a7-e2ee-483a-9f43-e417b78f1ffe.png)
 
+In the app, you can upload (also via drag and drop) your files
+![download_files](https://user-images.githubusercontent.com/80674763/173238298-5797e0c1-ffb0-4da5-847e-c774288a9c31.png)
 
+You can see the progress of your files upload
+![progress](https://user-images.githubusercontent.com/80674763/173238307-37ec1358-e62b-41b9-a5c4-b50a61d1b5a6.png)
 ## Frontend :
 React
 Hooks: useState, useEffect, useContext.
