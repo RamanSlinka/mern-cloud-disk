@@ -2,6 +2,10 @@
 # Cloud storage
 ver.1.0.42
 ## This application is made using MERN technologies such as: MongoDB, Express, React, NodeJs
+
+Initially, you can register and create your account. After login there
+![registration](https://user-images.githubusercontent.com/80674763/173237717-9bb130a8-94a4-4ae5-baed-8887f115e41e.png)
+
 ## Frontend :
 React
 Hooks: useState, useEffect, useContext.
