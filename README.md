@@ -14,6 +14,13 @@ In the app, you can upload (also via drag and drop) your files
 
 You can see the progress of your files upload
 ![progress](https://user-images.githubusercontent.com/80674763/173238307-37ec1358-e62b-41b9-a5c4-b50a61d1b5a6.png)
+
+You can find the desired file using the filter. Or change the way files and folders are displayed on the page in the settings panel.
+![filter](https://user-images.githubusercontent.com/80674763/173239667-d3f098f0-2c71-497d-8f48-ee1caafcad3a.png)
+
+Files uploaded to the application can be downloaded to your device or permanently deleted.
+![delete_dowload](https://user-images.githubusercontent.com/80674763/173239676-849e82c1-67ba-4eda-b4b4-229a6ac3095c.png)
+
 ## Frontend :
 React
 Hooks: useState, useEffect, useContext.
