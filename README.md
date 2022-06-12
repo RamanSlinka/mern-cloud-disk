@@ -1,10 +1,13 @@
 # Hi there !
 # Cloud storage
 ver.1.0.42
+
+You can open this application on this [link ]((https://mern-cloud-disk-client.herokuapp.com/))
 ## This application is made using MERN technologies such as: MongoDB, Express, React, NodeJs
 ## Frontend :
-React
-Hooks: useState, useEffect, useContext.
+You can see code on this [link ]((https://github.com/RamanSlinka/mern-cloud-disk))
+
+React Hooks: useState, useEffect, useContext.
 React router. Page navigation. BrowserRouter, Route.
 Redux, react-redux, redux-thunk.
 Registration.Authorisation
@@ -17,6 +20,8 @@ Library React icons.
 Unit tests - Jest
 
 ## Backend:
+You can see code on this [link ]((https://github.com/RamanSlinka/mern-cloud-disk-server))
+
 REST Api
 Registration on the server
 JWT token, authorization
