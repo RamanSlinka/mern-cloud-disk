@@ -2,7 +2,7 @@
 # Cloud storage
 ver.1.0.42
 
-You can open this application on this [link ]((https://mern-cloud-disk-client.herokuapp.com/))
+You can open this application on this link [https://mern-cloud-disk-client.herokuapp.com/]((https://mern-cloud-disk-client.herokuapp.com/))
 ## This application is made using MERN technologies such as: MongoDB, Express, React, NodeJs
 
 Initially, you can register and create your account. After login there
@@ -24,7 +24,7 @@ Files uploaded to the application can be downloaded to your device or permanentl
 ![delete_dowload](https://user-images.githubusercontent.com/80674763/173239676-849e82c1-67ba-4eda-b4b4-229a6ac3095c.png)
 
 ## Frontend :
-You can see code on this [link ]((https://github.com/RamanSlinka/mern-cloud-disk))
+You can see code on this link [https://github.com/RamanSlinka/mern-cloud-disk]((https://github.com/RamanSlinka/mern-cloud-disk))
 
 React Hooks: useState, useEffect, useContext.
 React router. Page navigation. BrowserRouter, Route.
@@ -39,7 +39,7 @@ Library React icons.
 Unit tests - Jest
 
 ## Backend:
-You can see code on this [link ]((https://github.com/RamanSlinka/mern-cloud-disk-server))
+You can see code on this link [https://github.com/RamanSlinka/mern-cloud-disk-server]((https://github.com/RamanSlinka/mern-cloud-disk-server))
 
 REST Api
 Registration on the server
