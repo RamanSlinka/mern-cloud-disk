@@ -1,8 +1,15 @@
-# Hi there !
+## Hi there !
+
 # Cloud storage
+
 ver.1.0.42
 
-You can open this application on this link [https://mern-cloud-disk-client.herokuapp.com/]((https://mern-cloud-disk-client.herokuapp.com/))
+This is a web application where you can upload and store your files. First create an account and register. Files can be
+sorted, filtered and deleted. Saved files can later be downloaded to any of your own devices.
+
+You can open this application on this
+link [https://mern-cloud-disk-client.herokuapp.com/](https://mern-cloud-disk-client.herokuapp.com/)
+
 ## This application is made using MERN technologies such as: MongoDB, Express, React, NodeJs
 
 Initially, you can register and create your account. After login there
@@ -17,14 +24,17 @@ In the app, you can upload (also via drag and drop) your files
 You can see the progress of your files upload
 ![progress](https://user-images.githubusercontent.com/80674763/173238307-37ec1358-e62b-41b9-a5c4-b50a61d1b5a6.png)
 
-You can find the desired file using the filter. Or change the way files and folders are displayed on the page in the settings panel.
+You can find the desired file using the filter. Or change the way files and folders are displayed on the page in the
+settings panel.
 ![filter](https://user-images.githubusercontent.com/80674763/173239667-d3f098f0-2c71-497d-8f48-ee1caafcad3a.png)
 
 Files uploaded to the application can be downloaded to your device or permanently deleted.
 ![delete_dowload](https://user-images.githubusercontent.com/80674763/173239676-849e82c1-67ba-4eda-b4b4-229a6ac3095c.png)
 
 ## Frontend :
-You can see code on this link [https://github.com/RamanSlinka/mern-cloud-disk]((https://github.com/RamanSlinka/mern-cloud-disk))
+
+You can see code on this
+link [https://github.com/RamanSlinka/mern-cloud-disk](https://github.com/RamanSlinka/mern-cloud-disk)
 
 React Hooks: useState, useEffect, useContext.
 React router. Page navigation. BrowserRouter, Route.
@@ -39,7 +49,9 @@ Library React icons.
 Unit tests - Jest
 
 ## Backend:
-You can see code on this link [https://github.com/RamanSlinka/mern-cloud-disk-server]((https://github.com/RamanSlinka/mern-cloud-disk-server))
+
+You can see code on this
+link [https://github.com/RamanSlinka/mern-cloud-disk-server](https://github.com/RamanSlinka/mern-cloud-disk-server)
 
 REST Api
 Registration on the server
@@ -49,8 +61,6 @@ Uploading files to the server
 Deleting files
 File sorting
 Sharing statics, User avatar
-
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -69,7 +79,8 @@ You may also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
 
 
